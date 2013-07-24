@@ -1,0 +1,560 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* End Reset */
+
+/* Typography */
+
+p {
+  font-size: 1.1em;
+  line-height: 1.4em;
+}
+
+h1 {
+  font-size: 1.4em;
+  line-height: 1.5em;
+  margin-bottom: 20px;
+}
+
+.intro {
+  font-size: 1.3em;
+  line-height: 1.4em;
+}
+
+a, a:hover, a:visited, a:active {
+  text-decoration: none;
+}
+
+a:hover, a:active {
+  text-decoration: underline;
+}
+
+
+
+/* Handy Classes */
+
+
+.shadow {
+  -moz-box-shadow:    0px 0px 4px 1px #333;
+  -webkit-box-shadow: 0px 0px 4px 1px #333;
+  box-shadow:         0px 0px 4px 1px #333;
+}
+
+.shadowDark {
+  -moz-box-shadow:    0px 0px 6px 6px #333;
+  -webkit-box-shadow: 0px 0px 6px 6px #333;
+  box-shadow:         0px 0px 6px 6px #333;
+}
+
+.underline {
+text-decoration: underline;
+}
+
+.italic {
+font-style: italic;
+}
+
+.bold {
+font-weight: bold;
+}
+
+.roundedcorners {
+-moz-border-radius: 10px;
+-webkit-border-radius: 10px;
+border-radius: 10px; /* future proofing */
+-khtml-border-radius: 10px; /* for old Konqueror browsers */
+}
+
+.transparent {
+  zoom: 1;
+  filter: alpha(opacity=80);
+  opacity: 0.8;
+}
+
+.opaque {
+  zoom: 1;
+  filter: alpha(opacity=100);
+  opacity: 1;
+}
+
+.borderbox {
+-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+  -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+  box-sizing: border-box;         /* Opera/IE 8+ */ 
+}
+
+.clear:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+/* Images scaled/resize smoother in Webkit (mainly Safari issue)
+img {
+  width: 100%;
+  height: auto;
+  -webkit-transform: translate3d(0, 0, 0);
+  -ms-interpolation-mode: bicubic;
+}
+*/
+
+/* Font anti-aliasing in Webkit
+p, h1, h4, h5, h6 {
+  font-family: 'ostrich_sansmedium';
+  -webkit-text-stroke: 0.1px;
+}
+*/
+
+/* Layout */
+
+body {
+background-color: #000;
+font-family: 'Roboto Condensed', sans-serif;
+}
+
+#wrapper {
+width: 100%;
+}
+
+#container {
+width: 100%;
+margin: 0px auto;
+background-color: #eee;
+overflow: hidden;
+padding-top: 63px;
+background-color: #c11020;
+position: relative;
+}
+
+#header {
+position: fixed;
+width: 100%;
+z-index: 500;
+top:0px;
+}
+
+#mainNav {
+width: 100%;
+max-width: 700px; 
+min-width: 200px; 
+-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+-moz-box-sizing: border-box;    /* Firefox, other Gecko */
+box-sizing: border-box;         /* Opera/IE 8+ */ 
+border-top: 1px solid #74121a;
+border-bottom: 1px solid #74121a;
+border-left: 1px solid #74121a;
+z-index: 600;
+height: 62px;
+background-color: #74121a;
+  -moz-box-shadow: 0 0px 2px 2px #000;
+  -webkit-box-shadow: 0 0px 2px 2px #000;
+  box-shadow: 0 0px 2px 2px #000;
+}
+
+#mainNav li {
+width: 20%;
+height: 60px;
+background:#c11020 url('../images/buttonBg.jpg') repeat-x left bottom;
+float: left;
+text-align: center;
+-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+-moz-box-sizing: border-box;    /* Firefox, other Gecko */
+box-sizing: border-box;         /* Opera/IE 8+ */ 
+border-right: 1px solid #74121a;
+font-size: 30px;
+}
+
+#mainNav li a {
+display: block;
+padding: 10px;
+color: #fff;
+text-decoration: none;
+}
+
+.quickLinksContainer {
+width: 100%;
+float: left;
+position: relative;
+z-index: 200;
+height: 70px;
+overflow: hidden;
+}
+
+.quickLinks {
+width: 100%;
+float: left;
+-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+-moz-box-sizing: border-box;    /* Firefox, other Gecko */
+box-sizing: border-box;         /* Opera/IE 8+ */ 
+border-right: 1px solid #74121a;
+border-top: 1px solid #74121a;
+border-bottom: 1px solid #74121a;
+height: 70px;
+background:#c11020 url('../images/buttonBg.jpg') repeat-x left bottom;
+}
+
+.quickLinks li {
+width: 33.33333%;
+float: left;
+text-align: center;
+-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+-moz-box-sizing: border-box;    /* Firefox, other Gecko */
+box-sizing: border-box;         /* Opera/IE 8+ */ 
+font-size: 17px;
+border-left: 1px solid #74121a;
+background:#c11020 url('../images/buttonBg.jpg') repeat-x left bottom;
+height: 70px;
+}
+
+.quickLinks li a {
+display: block;
+padding: 15px 0;
+color: #fff;
+text-decoration: none;
+zoom: 1;
+filter: alpha(opacity=1);
+opacity: 1;
+}
+
+#mainContent {
+width: 92%;
+margin: 20px 4% 20px;
+float: left;
+text-align: left;
+padding: 20px 20px;
+-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+-moz-box-sizing: border-box;    /* Firefox, other Gecko */
+box-sizing: border-box;         /* Opera/IE 8+ */
+overflow: hidden;
+background-color: #eee;
+min-height: 300px;
+border-radius: 5px;
+}
+
+#mainContent p {
+margin: 10px 0;
+}
+
+
+#content {
+position: relative;
+min-height: 500px;
+}
+
+.button {
+background:#c11020 url('../images/buttonBg.jpg') repeat-x left bottom;
+display: block;
+   margin: 10px 0;
+   border-radius: 10px;
+   height: 30px;
+   padding-top: 20px;
+   color: #fff;
+   text-align: center;
+ }
+
+ #wholeNavContainer {
+width: 95%;
+margin: 0 2.5%;
+-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+-moz-box-sizing: border-box;    /* Firefox, other Gecko */
+box-sizing: border-box;         /* Opera/IE 8+ */ 
+border: 1px solid #74121a;
+padding: 80px 10px 10px;
+position: absolute;
+top: -10px;
+left: 0;
+z-index: 300;
+background-color: #c11020;
+-moz-border-radius: 10px;
+-webkit-border-radius: 10px;
+border-radius: 10px; /* future proofing */
+-khtml-border-radius: 10px; /* for old Konqueror browsers */
+zoom: 1;
+  filter: alpha(opacity=95);
+  opacity: 0.95;
+  display: none;
+}
+
+#wholeNav li {
+width: 100%;
+max-width: 700px; 
+min-width: 200px; 
+float: left;
+background:#c11020 url('../images/buttonBg.jpg') repeat-x left bottom;
+text-align: center;
+-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+-moz-box-sizing: border-box;    /* Firefox, other Gecko */
+box-sizing: border-box;         /* Opera/IE 8+ */ 
+font-size: 16px;
+margin-bottom: 6px;
+-moz-border-radius: 10px;
+-webkit-border-radius: 10px;
+border-radius: 10px; /* future proofing */
+-khtml-border-radius: 10px; /* for old Konqueror browsers */
+border: 2px solid #8d0b17;
+position: relative;
+}
+
+#wholeNav li a {
+display: block;
+padding: 15px 0;
+color: #eee;
+text-decoration: none;
+}
+
+
+/*! http://responsiveslides.com v1.54 by @viljamis */
+
+.rslides {
+  position: relative;
+  list-style: none;
+  overflow: hidden;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  }
+
+.rslides li {
+  -webkit-backface-visibility: hidden;
+  position: absolute;
+  display: none;
+  width: 100%;
+  left: 0;
+  top: 0;
+  }
+
+.rslides li:first-child {
+  position: relative;
+  display: block;
+  float: left;
+  }
+
+.rslides img {
+  display: block;
+  height: auto;
+  float: left;
+  width: 100%;
+  border: 0;
+  }
+
+  #formContainer {
+    padding-top: 10px;
+  }
+
+#formContainer .title {
+  width: 30%;
+  float: left;
+  margin: 6px 0;
+}
+
+#formContainer .theinputfield {
+  width: 70%;
+  float: left;
+  font-size: 0.9em; 
+margin: 6px 0;
+text-align:right;
+position: relative;
+}
+
+
+#formContainer input, #formContainer textarea, #formContainer select {
+width: 94%;
+padding: 1px 2%;
+margin: 0;
+border: none;
+font-size: 1em;
+background: #fff;
+height: 35px;
+}
+
+
+#formContainer textarea {
+height: 35px; 
+}
+
+
+#formContainer .submitBtn {
+ border: 1px solid #666666;
+    border-radius: 10px 10px 10px 10px;
+    float: right;
+    height: auto;
+    margin: 5px 0 10px;
+    padding: 10px 0;
+    width: 100%;
+}
+
+#formContainer .submitBtn:hover {
+background-color: #ddd;
+cursor: pointer;
+}
+
+#formContainer .ui-datepicker-trigger {
+position: absolute;
+right: 3px;
+top: 5px;
+}
+
+#theOrigin {
+width: 100%;
+height: 80px;
+margin: 0px;
+border: none;
+background-color: #fff;
+text-align: center;
+border-radius: 5px;
+font-size: 20px;
+}
+
+#submitDirections {
+width: 90%;
+margin: 10px 5%;
+border: none;
+background:#c11020 url('../images/buttonBg.jpg') repeat-x left bottom;
+text-align: center;
+border-radius: 5px;
+cursor: pointer;
+}
+
+.switchButton {
+width: 100%;
+text-align: center;
+margin: 10px 0;
+background:#c11020 url('../images/buttonBg.jpg') repeat-x left bottom;
+border-radius: 5px;
+display: none;
+cursor: pointer;
+}
+
+#submitDirections p, .switchButton p {
+text-decoration: none;
+color: #fff;
+padding: 10px 0;
+-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+-moz-box-sizing: border-box;    /* Firefox, other Gecko */
+box-sizing: border-box;         /* Opera/IE 8+ */ 
+border-radius: 5px;
+}
+
+#map {
+width: 100%;
+height: 200px;
+padding: 20px 0;
+}
+
+
+#directions {
+width: 100%;
+margin: 20px 0;
+background-color: #fff;
+border-radius: 5px;
+}
+
+.adp {
+  overflow: auto;
+  padding: 20px 0;
+}
+
+.adp-directions {
+width: 100%;
+}
+
+.adp-directions tr {
+padding: 10px 0;
+}
+
+.adp-step, .adp-substep {
+padding: 1em 3px;
+}
+
+.adp-text {
+vertical-align: middle;
+text-align: center;
+font-weight: bold;
+}
+
+.adp-legal {
+text-align: center;
+}
+
+#loaderContainer {
+  text-align: center;
+  width: 43px;
+  display: none;
+  position: absolute;
+  top: 350px;
+  left: 50%;
+  margin-left: -21px;
+}
+
+/* Media Queries */
+
+@media all and (min-width: 740px) {
+#container {
+width: 700px; 
+margin: 0px auto;
+}
+
+.smallScreen {
+  display: none;
+}
+
+}
+
+@media all and (min-width: 1400px) {
+/* Put code here */
+}
+
+
+@media all and (max-width: 739px) and (min-width: 0px) {
+.largeScreen {
+  display: none;
+}
+}

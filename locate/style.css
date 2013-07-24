@@ -1,0 +1,76 @@
+/* Google map code */
+
+* {
+  font-family: 'Roboto Condensed', sans-serif;
+}
+ .white {
+  color: #fff; 
+ }
+ 
+ #gm_wrapper {
+  width: 100%;
+  margin: 0 auto;  
+ }
+ 
+ #gm_map {
+   width: 100%;
+   height: 400px;
+   float: left;
+ }
+ 
+ #gm_directionsHolder {
+   width: 100%;
+   height: 400px;
+   float: left;
+ }
+ 
+ 
+ #gm_directions {
+   width: 98%;
+  padding: 10px 1% 0;
+ }
+ 
+ 
+ #postcode {
+  margin: 5px 0 10px;
+ }
+ 
+ /*Overwriting JS file*/
+ 
+ #removeDirLink {
+  display: none; 
+ }
+ 
+ .getdirections {
+padding: 2px;
+background: #ddd;
+font-weight: bold;
+margin: 0;
+ }
+ 
+#location {
+padding: 1px; 
+   font-size: 0.8em;
+   width: 85%; 
+   margin-bottom: 5px;
+
+ }
+ 
+ /*Google Maps Directions Styling*/
+ .adp-placemark {
+  border: none;
+  margin-top: 0;
+  background: none;
+ }
+ 
+ .adp-step, .adp-substep {
+    border-top: 1px solid #CDCDCD;
+    margin: 0;
+    padding: 0.7em 3px;
+    vertical-align: top;
+}
+
+.adp-text {
+padding-top: 5px; 
+}
+
