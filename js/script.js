@@ -84,15 +84,22 @@ pushStateToUrl = function(url) {
 
 /* Load page to match URL if state changes i.e. when back/forward buttons are used */
 $(window).on("popstate", function(event) {
-    var newHref = location.href;
+    var thePoppedHref = location.href;
+    var thePoppedHref2;
+    var newHref;
+    if(thePoppedHref.indexOf("/") != -1) {
+        thePoppedHref2 = thePoppedHref.substring(thePoppedHref.lastIndexOf("/"));
+        newHref = thePoppedHref2.replace("/","");
+    }
+    else {
+        newHref = thePoppedHref;
+    }
     if (event.originalEvent.state !== null) {
-        newHref = location.href;
         shouldPushState = false;
         loadPage(newHref, shouldPushState);
     }
     else {
         if (stateChanged == true) {
-            newHref = location.href;
             shouldPushState = false;
             loadPage(newHref, shouldPushState);
         }
