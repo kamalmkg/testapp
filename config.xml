@@ -20,4 +20,7 @@
 
     <preference name="permissions" value="none"/>
 
+    <access origin="http://joyrajbristol.com" subdomains="true" />
+
+
 </widget>
