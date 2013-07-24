@@ -49,21 +49,21 @@ afterAjaxLoad = function(html, href, shouldPushState) {
 
     stateChanged = true;
 
-    if (href == 'index.php') {
+    if (href == 'index.html') {
         $.getScript("js/gallery.js");
     }
-    else if (href == 'booking.php') {
+    else if (href == 'booking.html') {
         console.log('booking page selected');
         $.getScript("js/booking.js");
     }
-    else if (href == 'location.php') {
+    else if (href == 'location.html') {
         console.log('location page selected');
         $.getScript("js/location.js");
     }
 
     
 
-    if (href != 'index.php') {
+    if (href != 'index.html') {
         $('html, body').animate({ scrollTop: jQuery('#content').offset().top - 60}, 300);
     }
     else {
